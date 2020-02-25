@@ -1,0 +1,66 @@
+[{
+    "id": 1,
+    "questionIntro": "A 35-year-old man sustains an anterior dislocation of the shoulder.  Cutaneous sensation over the lower half of the deltoid muscle is impaired.",
+    "question": "Which one of the following nerves has been damaged?",
+    "choices": {
+        "option1": "Axillary",
+        "option2": "Median",
+        "option3": "Musculocutaneous",
+        "option4": "Radial",
+        "option5": "Ulnar"
+    },
+    "choiceResponses": {
+        "option1":"The axillary nerve supplies the deltoid muscle.",
+        "option2":"Injury of this nerve at a level above the elbow results in loss of pronation and a reduction in flexion of the hand at the wrist.",
+        "option3":"Isolated injury causes weakness of elbow flexion and supination of the forearm.",
+        "option4":"Supplies the extensor compartment of the lower arm.",
+        "option5":"Sever entrapment or complete severing of the ulnar nerve can present clinically as an ulnar claw."
+    },
+    "answer": "option1",
+    "percentCorrect": "71%",
+    "keyConcept": "Anterior shoulder dislocation."
+},
+{
+    "id": 2,
+    "questionIntro": "A junior doctor wants to carry out a lumbar puncture on a patient with meningism.  He is unsure about at what level of the spine the procedure should be carried out and does not want to damage the spinal cord.",
+    "question": "At what level does the spinal cord end?",
+    "choices": {
+        "option1": "TI2",
+        "option2": "L1",
+        "option3": "L4",
+        "option4": "L5",
+        "option5": "T10"
+    },
+    "choiceResponses": {
+        "option1":"This is the level at which the abdominal aorta enters the abdomen through the diaphragm.",
+        "option2":"The spinal cord ends at the level of L1.",
+        "option3":"This is the level of the bifurcation of the aorta.",
+        "option4":"This is the level at which the iliac veins become the inferior vena cava.",
+        "option5":"This is the level at which the oesophagus enters the abdomen."
+    },
+    "answer": "option2",
+    "percentCorrect": "46%",
+    "keyConcept": "Conus Medullaris (anatomy)"
+},
+{
+    "id": 3,
+    "questionIntro": "A 71-year-old woman has a total hip replacement and postoperatively develops a Trendelenburg gait.",
+    "question": "Which of the following nerves is likely to be injured?",
+    "choices": {
+        "option1": "Femoral nerve",
+        "option2": "Sciatic nerve",
+        "option3": "Obturator nerve",
+        "option4": "Superior gluteal nerve",
+        "option5": "Lateral cutaneous nerve of the thigh"
+    },
+    "choiceResponses": {
+        "option1":"The femoral nerve supplies the anterior thigh muscles.",
+        "option2":"The sciatic nerve supplies the hamstrings and other hip extensors.",
+        "option3":"The obturator nerve supplies the hip adductors.",
+        "option4":"A superior gluteal nerve injury would paralyze the gluteus medius causing a Trendelenburg gait.",
+        "option5":"This innervates the skin on the lateral part of the thigh."
+    },
+    "answer": "option4",
+    "percentCorrect": "56%",
+    "keyConcept": "Trendelenburg Gait"
+}]

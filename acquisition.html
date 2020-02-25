@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
+
+    <!-- style sheets -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+
+    <link rel="stylesheet" href="assets/css/main.css" type="text/css" />
+
+    <!-- page title -->
+    <title>Elsevier | Quiz</title>
+</head>
+
+<body>
+    <!-- Invitation to sign up on acquisition form, only visible after user enters prize draw -->
+    <div id="acquisition-form-invite" class="container-fluid">
+        <div class="row no-gutters">
+            <!-- Top bar for acquisition invite page -->
+            <div class="col-12 top-bar">
+                <a href="index.html">
+                    <img src="assets/img/elsevier_logo.png" alt="ClinicalKey Student logo" class="logo">
+                </a>
+            </div>
+            <div class="col-12 mt-5 pt-5 text-center">
+                <h3>Are you interested in learning more about ClinicalKey Student and relevant products from Elsevier?
+                </h3>
+                <button type="button" class="restart-quiz-btn m-4 acquisition-invite-button">No thank you.</button>
+                <a href="https://campaigns.elsevier.com/apmec-conference" target="_blank" id="acquisition-link"
+                    class="m-4 btn acquisition-invite-button yes-btn">Yes Please!</a>
+            </div>
+        </div>
+        <!-- Bottom bar -->
+        <div class="bottom-bar"></div>
+    </div>
+    <!-- Button to restart quiz from any page -->
+    <button id="restart-quiz-btn" class="restart-quiz-btn" type="button">Restart quiz</button>
+
+    <!-- Spinner, visible when page loading and when ajax in operation for sending email -->
+    <div id="spinner-background">
+        <div id="spinner-wrapper">
+            <div id="spinner" Title="loading"></div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- scripts for bootstrap & jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- my script -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

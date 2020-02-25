@@ -1,0 +1,502 @@
+@import url("https://use.typekit.net/mpl5xax.css");
+
+/* Variables */
+
+$red: #c20606;
+$orange: #FF8200;
+
+/* Headings and fonts */
+
+#start-pg-header {
+    margin-top: 20vh;
+    width:400px;
+    display: block;
+}
+
+h1#termsHeading {
+    font-size: 1.6rem;
+    text-decoration: underline;
+}
+
+h2.complete {
+    font-size: 1.6rem;
+}
+
+h3 {
+    font-size: 1.3rem;
+}
+
+h4 {
+    font-size: 1.1rem;
+}
+
+h5 {
+    font-size: 0.9rem;
+}
+
+.intro-info h3 {
+    font-size: 1.8rem;
+}
+.intro-info li {
+    font-size: 1.2rem;
+}
+
+#side-info-bar p,
+#side-info-bar a,
+#final-score-bar p {
+    font-size: 0.9rem;
+}
+
+#side-info-bar i.fa-copy {
+    font-size: 1.6rem;
+}
+
+.key-concept-heading {
+    font-size: 1.1rem
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+/* Containers */
+
+/* CREDIT: code to fix bottom-bar to bottom of page even when there is not
+enough content to push it down taken from https://css-tricks.com/couple-takes-sticky-footer/ */
+html,
+body {
+    height: 100%;
+}
+
+body {
+    color: #808080;
+    font-family: 'ff-nexus-sans', sans-serif;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.intro-info {
+    margin-top: 5rem;
+}
+
+.content {
+    -webkit-box-flex: 1;
+    flex: 1 0 auto;
+}
+
+.bottom-bar {
+    position: absolute;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+    height: 4rem;
+    border-top: 2px solid lightgray;
+    width: 100%;
+    padding: 1rem;
+    flex-shrink: 0;
+    z-index: 10;
+}
+
+#side-info-bar,
+#final-score-bar {
+    background-color: rgb(236, 236, 236);
+    padding: 1.5rem;
+    max-width: 250px;
+    height: 100vh;
+    padding-top: 65px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.top-bar {
+    height: 56px;
+    width: 100%;
+    border-bottom: 2px solid lightgray;
+    background-color: white;
+    z-index: 10;
+}
+
+/* Margins */
+
+#email-signup-form {
+    margin-top: 10vh;
+}
+
+
+/* Icons, buttons, progress bar */
+
+.logo {
+    height: 40px;
+    margin: 8px;
+}
+
+.progress {
+    height: 0.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.circle-mark {
+    /* positions circle mark in line with radio checkbox */
+    margin-left: -1.5rem;
+    margin-top: 0.05rem;
+    position: absolute;
+    font-size: 1.1rem;
+}
+
+.fa-times-circle {
+    color: $red;
+}
+
+.fa-check-circle {
+    color: #015f06;
+}
+
+.fa-chevron-right {
+    margin-left: 1rem;
+}
+
+button,
+#acquisition-link {
+    background-color: #007398;
+    color: white;
+    border: none;
+    min-width: 85px;
+    height: 30px;
+    font-size: 0.9rem;
+    margin-right: 0.3rem;
+    border-radius: 0;
+}
+
+#acquisition-link.yes-btn {
+    background-color: #FF8200;
+    min-width: 120px;
+}
+
+.acquisition-invite-button {
+    min-width: 120px;
+}
+
+#start-btn {
+    margin: 0;
+    margin-top: 25px;
+    width: 140px;
+}
+
+#restart-quiz-btn {
+    width: 100px;
+    position: absolute;
+    margin: 16px;
+    bottom: 0;
+    right: 0;
+    z-index: 200;
+    background-color: #FF8200;
+}
+
+/* radios, questions, response */
+
+#question-response {
+    font-weight: 400;
+}
+
+#progress-bar-text,
+label {
+    font-size: 0.9rem;
+}
+
+label {
+    margin-bottom: 0;
+}
+
+.radio-response,
+.choice-response {
+    font-size: 0.85rem;
+}
+
+.radio-response {
+    color: $red;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.choice-response {
+    padding-left: 1rem;
+    border-left: 3px solid lightgray;
+    margin-bottom: 0.2rem;
+}
+
+.form-check {
+    padding-left: 3rem;
+}
+
+
+/* Side info bar */
+
+.concept-box {
+    color: rgb(34, 34, 34);
+    background-color: #cccaca;
+    border-radius: 15px;
+}
+
+/* Spinner */
+
+#spinner-background {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#spinner-wrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -25px;
+    margin-left: -25px;
+    height: 50px;
+    width: 50px;
+    z-index: 99999;
+}
+
+#spinner {
+    background-image: url("../img/spinner.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+/* custom radio code from https://codepen.io/triss90/pen/XNEdRe/*/
+$color1: #f4f4f4;
+$color2: #FF8200;
+$color3: #3d3d3d;
+
+.radio-orange {
+    margin: 0.5rem;
+
+    input[type="radio"] {
+        position: absolute;
+        opacity: 0;
+
+        +.radio-label {
+            &:before {
+                content: '';
+                background: $color1;
+                border-radius: 100%;
+                border: 1px solid darken($color1, 25%);
+                display: inline-block;
+                width: 1.4em;
+                height: 1.4em;
+                position: relative;
+                top: -0.2em;
+                margin-right: 1em;
+                vertical-align: top;
+                cursor: pointer;
+                text-align: center;
+                -webkit-transition: all 250ms ease;
+                transition: all 250ms ease;
+            }
+        }
+
+        &:checked {
+            +.radio-label {
+                &:before {
+                    background-color: $color2;
+                    box-shadow: inset 0 0 0 4px $color1;
+                }
+            }
+        }
+
+        &:focus {
+            +.radio-label {
+                &:before {
+                    outline: none;
+                    border-color: $color2;
+                }
+            }
+        }
+
+        &:disabled {
+            +.radio-label {
+                &:before {
+                    box-shadow: inset 0 0 0 4px $color1;
+                    border-color: darken($color1, 25%);
+                    background: darken($color1, 25%);
+                }
+            }
+        }
+
+        +.radio-label {
+            &:empty {
+                &:before {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+/* Could not find the right css to adjust the colour of the radio on it's own,
+so replicated the full code from codepen again and changed the class with 
+javascript when I needed it. */
+.radio-grey {
+    margin: 0.5rem;
+
+    input[type="radio"] {
+        position: absolute;
+        opacity: 0;
+
+        +.radio-label {
+            &:before {
+                content: '';
+                background: $color1;
+                border-radius: 100%;
+                border: 1px solid darken($color1, 25%);
+                display: inline-block;
+                width: 1.4em;
+                height: 1.4em;
+                position: relative;
+                top: -0.2em;
+                margin-right: 1em;
+                vertical-align: top;
+                cursor: pointer;
+                text-align: center;
+                -webkit-transition: all 250ms ease;
+                transition: all 250ms ease;
+            }
+        }
+
+        &:checked {
+            +.radio-label {
+                &:before {
+                    background-color: $color3;
+                    box-shadow: inset 0 0 0 4px $color1;
+                }
+            }
+        }
+
+        &:focus {
+            +.radio-label {
+                &:before {
+                    outline: none;
+                    border-color: $color3;
+                }
+            }
+        }
+
+        &:disabled {
+            +.radio-label {
+                &:before {
+                    box-shadow: inset 0 0 0 4px $color1;
+                    border-color: darken($color1, 25%);
+                    background: darken($color1, 25%);
+                }
+            }
+        }
+
+        +.radio-label {
+            &:empty {
+                &:before {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+/* custom checkbox code from https://codepen.io/GeoffreyCrofte/pen/BiHzp */
+/* Base for label styling */
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+    position: absolute;
+    left: -9999px;
+}
+
+[type="checkbox"]:not(:checked)+label,
+[type="checkbox"]:checked+label {
+    position: relative;
+    padding-left: 1.95em;
+    cursor: pointer;
+}
+
+/* checkbox aspect */
+[type="checkbox"]:not(:checked)+label:before,
+[type="checkbox"]:checked+label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1.25em;
+    height: 1.25em;
+    border: 2px solid #ccc;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, .1);
+}
+
+/* checked mark aspect */
+[type="checkbox"]:not(:checked)+label:after,
+[type="checkbox"]:checked+label:after {
+    content: '\2713\0020';
+    position: absolute;
+    top: .15em;
+    left: .22em;
+    font-size: 1.4em;
+    line-height: 0.8;
+    color: $color2;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+    font-family: 'Lucida Sans Unicode', 'Arial Unicode MS', Arial;
+}
+
+/* checked mark aspect changes */
+[type="checkbox"]:not(:checked)+label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+
+[type="checkbox"]:checked+label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+/* disabled checkbox */
+[type="checkbox"]:disabled:not(:checked)+label:before,
+[type="checkbox"]:disabled:checked+label:before {
+    box-shadow: none;
+    border-color: #bbb;
+    background-color: #ddd;
+}
+
+[type="checkbox"]:disabled:checked+label:after {
+    color: #999;
+}
+
+[type="checkbox"]:disabled+label {
+    color: #aaa;
+}
+
+/* accessibility */
+[type="checkbox"]:checked:focus+label:before,
+[type="checkbox"]:not(:checked):focus+label:before {
+    border: 2px solid $color2;
+}
+
+/* hover style just for information */
+label:hover:before {
+    border: 2px solid $color2 !important;
+}

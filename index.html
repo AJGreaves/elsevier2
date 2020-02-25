@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
+
+    <!-- style sheets -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+
+    <link rel="stylesheet" href="assets/css/main.css" type="text/css" />
+
+    <!-- page title -->
+    <title>Elsevier | Quiz</title>
+</head>
+
+<body>
+    <!-- Start page, visible on loading the page, hit start button to begin -->
+    <div id="start-page" class="content">
+
+        <!-- Top bar for start page -->
+        <div class="top-bar">
+            <a href="index.html">
+                <img src="assets/img/elsevier_logo.png" alt="ClinicalKey Student logo" class="logo">
+            </a>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row no-gutters justify-content-center">
+                <div class="col-10 col-lg-7 intro-info">
+                    <h3>We have a new learning tool, ClinicalKey Student, that enables:</h3>
+                    <ul>
+                        <li>Teachers to assign tests to students</li>
+                        <li>Teachers to use evidence to understand where students are struggling and adjust teaching</li>
+                        <li>Students to receive immediate feedback and advice on areas they can improve</li>
+                        <li>Students to self-assess on their own</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row no-gutters justify-content-center">
+                <div class="col-12 col-lg-5 text-center">
+                        <button type="button" id="start-btn" class="mx-auto">Test it out <i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--/start page-->
+
+
+    <!-- Main content, all questions and answer options displayed here -->
+    <form id="formAnswer" action="POST" class="d-none">
+        <main class="content">
+
+            <div class="container-fluid">
+                <div class="row no-gutters page-row">
+
+                    <!-- Top bar for question page -->
+                    <div class="col-12 top-bar">
+                        <a href="index.html">
+                            <img src="assets/img/elsevier_logo.png" alt="ClinicalKey Student logo" class="logo">
+                        </a>
+                    </div>
+
+                    <!-- 
+                        Question column, col-12 when asking questions, 
+                        col-9 col-xl-10 when giving answers to make room 
+                        for side column.
+                    -->
+                    <div id="question-column" class="col-12">
+                        <div class="row no-gutters justify-content-center">
+                            <div class="col-10 col-lg-8 multiple-choice-wrapper">
+
+                                <!-- progress bar -->
+                                <div class="progress-bar-wrapper mt-3">
+                                    <div id="progress-bar-text"></div>
+                                    <div id="progress-bar" class="progress">
+                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 0%"
+                                            aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+
+                                <!-- Question -->
+                                <p id="questionIntro" class="mb-1"></p>
+                                <p id="question"></p>
+                                <p id="question-response" class="d-none"></p>
+
+                                <!-- Answer options -->
+                                <div class="form-check">
+                                    <div class="circle-wrapper d-none">
+                                        <i id="circle-option1" class="circle-mark fas fa-check-circle"></i>
+                                    </div>
+                                    <div class="radio-orange">
+                                        <input class="form-check-input" type="radio" name="radios" id="option1"
+                                            value="option1" required>
+                                        <label id="option1Label" class="radio-label" for="option1"></label>
+                                    </div>
+
+                                    <div id="option1-response-box">
+                                        <div class="radio-response"></div>
+                                        <p class="choice-response"></p>
+                                    </div>
+                                </div>
+
+                                <div class="form-check">
+                                    <div class="circle-wrapper d-none">
+                                        <i id="circle-option2" class="circle-mark fas fa-times-circle"></i>
+                                    </div>
+
+
+                                    <div class="radio-orange">
+                                        <input class="form-check-input" type="radio" name="radios" id="option2"
+                                            value="option2" required>
+                                        <label id="option2Label" class="radio-label" for="option2"></label>
+                                    </div>
+
+                                    <div id="option2-response-box">
+                                        <div class="radio-response"></div>
+                                        <p class="choice-response"></p>
+                                    </div>
+                                </div>
+
+                                <div class="form-check">
+                                    <div class="circle-wrapper d-none">
+                                        <i id="circle-option3" class="circle-mark fas fa-times-circle"></i>
+                                    </div>
+                                    <div class="radio-orange">
+                                        <input class="form-check-input" type="radio" name="radios" id="option3"
+                                            value="option3" required>
+                                        <label id="option3Label" class="radio-label" for="option3"></label>
+                                    </div>
+
+                                    <div id="option3-response-box">
+                                        <div class="radio-response"></div>
+                                        <p class="choice-response"></p>
+                                    </div>
+                                </div>
+
+                                <div class="form-check">
+                                    <div class="circle-wrapper d-none">
+                                        <i id="circle-option4" class="circle-mark fas fa-times-circle"></i>
+                                    </div>
+                                    <div class="radio-orange">
+                                        <input class="form-check-input" type="radio" name="radios" id="option4"
+                                            value="option4" required>
+                                        <label id="option4Label" class="radio-label" for="option4"></label>
+                                    </div>
+
+                                    <div id="option4-response-box">
+                                        <div class="radio-response"></div>
+                                        <p class="choice-response"></p>
+                                    </div>
+                                </div>
+
+                                <div class="form-check">
+                                    <div class="circle-wrapper d-none">
+                                        <i id="circle-option5" class="circle-mark fas fa-times-circle"></i>
+                                    </div>
+                                    <div class="radio-orange">
+                                        <input class="form-check-input" type="radio" name="radios" id="option5"
+                                            value="option5" required>
+                                        <label id="option5Label" class="radio-label" for="option5"></label>
+                                    </div>
+
+                                    <div id="option5-response-box">
+                                        <div class="radio-response"></div>
+                                        <p class="choice-response"></p>
+                                    </div>
+                                </div>
+                                <!--/answer options-->
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- side column, not visible when asking questions, col-3 when giving answers -->
+                    <div id="side-info-bar" class="col-3 d-none">
+
+                        <p class="key-concept-heading mb-1">Key Concepts</p>
+                        <p id="key-concept" class="concept-box text-center py-1">branch of abdominal aorta</p>
+
+                        <h2 id="percent-correct"></h2>
+                        <p>Percentage of students who got this right.</p>
+                        <h2 id="timerResult"></h2>
+                        <p>Time you spent answering this question.</p>
+                        <hr>
+
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Bottom bar on questions page -->
+        <div class="bottom-bar container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-8">
+                    <button id="confident-btn" type="submit">Confident</button>
+                    <button id="unsure-btn" type="submit">Not Sure</button>
+                    <button id="next-btn" class="d-none" type="button">Next <i
+                            class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <!-- Prize draw signup page, only visible after quiz is complete -->
+    <div id="email-signup-page" class="container-fluid d-none">
+        <div class="row no-gutters">
+
+            <!-- Top bar for signup page -->
+            <div class="col-12 top-bar">
+                <a href="index.html">
+                    <img src="assets/img/elsevier_logo.png" alt="ClinicalKey Student logo" class="logo">
+                </a>
+            </div>
+
+            <!-- Email signup form -->
+            <div class="col-9">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-9 mt-3">
+                        <h3>Nicely done! Enter our prize draw below and we will email you if you’re the winner!</h3>
+                        <iframe class="mt-5" src="https://campaigns.elsevier.com/ottawa-conference-event&no_css=true" height="600" width="800" style="border:none;"></iframe>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- final score bar visible with email signup on completing the test -->
+            <div id="final-score-bar" class="col-3">
+
+                <h2 class="complete">Test complete!</h2>
+                <hr>
+                <h3 id="num-correct"></h3>
+                <p>Your score</p>
+                <h3 id="num-confident"></h3>
+                <p>Number of answers you were confident of.</p>
+                <h3 id="num-unsure"></h3>
+                <p>Number of answers you were unsure of.</p>
+                <hr>
+
+            </div>
+        </div>
+
+        <!-- Bottom bar -->
+        <div class="bottom-bar"></div>
+
+    </div>
+
+    <!-- Button to restart quiz from any page -->
+    <button id="restart-quiz-btn" class="d-none restart-quiz-btn" type="button">Restart quiz</button>
+
+    <!-- Spinner, visible when page loading and when ajax in operation for sending email -->
+    <div id="spinner-background">
+        <div id="spinner-wrapper">
+            <div id="spinner" Title="loading"></div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- scripts for bootstrap & jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- my script -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
