@@ -61,7 +61,7 @@ function restartQuiz() {
     numCorrect = 0;
     progress = 0;
     $('input').prop('checked', false);
-    document.location.href="/elsevier/"; /* change to just "/" when working locally */
+    document.location.href="/elsevier2/"; /* change to just "/" when working locally */
 
     return;
 }
@@ -74,7 +74,7 @@ $('#acquisition-link').click(function() {
     progress = 0;
     $('input').prop('checked', false);
     setTimeout(function(){ 
-        document.location.href="/elsevier/";; 
+        document.location.href="/elsevier2/";; 
     }, 1000);
 
     return;
